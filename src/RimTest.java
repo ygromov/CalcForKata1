@@ -3,8 +3,8 @@ import java.util.ArrayList;
 class RimTest {
 
     String result (String stroke) {
-        ArrayList<String> stroka = new ArrayList<>();
-        ArrayList<String> roman = new ArrayList<>();
+        ArrayList<String> stroka = new ArrayList<>();           //zapis' stroki v massiv
+        ArrayList<String> roman = new ArrayList<>();            // zapis'
         roman.add("I");
         roman.add("II");
         roman.add("III");
@@ -37,7 +37,7 @@ class RimTest {
             stroka.add(String.valueOf(stroke.charAt(i)));
             }
         for (int i = 0; i < stroke.length(); i++) {
-            if (stroka.get(i).equals("+") || stroka.get(i).equals("-") || stroka.get(i).equals("*") || stroka.get(i).equals("/")) {
+                if (stroka.get(i).equals("+") || stroka.get(i).equals("-") || stroka.get(i).equals("*") || stroka.get(i).equals("/")) {
                 znak = stroka.get(i);
                 position = i;
                 if (position == 1) {
@@ -58,17 +58,18 @@ class RimTest {
 
                 }
             }
-        }
+
+        } System.out.println(one + " " +two);
             for (int i =0; i< roman.size();i++){
 
                 if(roman.get(i).equals(one)){
                     one=arabian.get(i);
-                } else System.out.println("ne korrektno vvedena operaciya");
+                } //else System.out.println("ne korrektno vvedena operaciya");
             }
             for (int i =0; i< roman.size();i++){
                 if(roman.get(i).equals(two)){
                     two=arabian.get(i);
-                } else System.out.println("ne korrektno vvedena operaciya");
+                } //else System.out.println("ne korrektno vvedena operaciya");
             }
         String text = one + znak + two;
         return text;
